@@ -1,12 +1,11 @@
 const config = {
-  models: {
-    Genre: require('./models/genre'),
-    Movie: require('./models/movie')
-  },
+  models: require('./models/models.json'),
 
   store: {
-    rootModel: 'Movie'
-  }
+    rootModel: 'App'
+  },
+
+  selectors: require('./selectors/selectors.json')
 }
 
 module.exports = config

@@ -1,10 +1,23 @@
 const routes = {
   id: 'home',
-  path: '/',
+  path: '/todos',
+
   children: [
     {
-      id: 'about',
-      path: '/about',
+      id: 'list',
+      path: '',
+      page: 'TodosPage'
+    },
+    {
+      id: 'new',
+      path: '/new',
+      page: 'NewTodoPage'
+    },
+    {
+      id: 'show',
+      path: '/:todoId',
+      // page: 'ShowTodoPage'
+      action: () => 'ShowTodosPage'
     }
   ]
 }
